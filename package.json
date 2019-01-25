@@ -1,0 +1,23 @@
+{
+  "name": "screeps-helpers",
+  "version": "0.0.0",
+  "description": "A collection of helper functions for the game Screeps",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dextermb/screeps-helpers.git"
+  },
+  "keywords": [
+    "screeps",
+    "helpers"
+  ],
+  "author": "Dexter Marks-Barber <dexter@marks-barber.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dextermb/screeps-helpers/issues"
+  },
+  "homepage": "https://github.com/dextermb/screeps-helpers#readme"
+}
