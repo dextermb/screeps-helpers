@@ -8,8 +8,9 @@
     "lint": "standard",
     "fix": "npm run lint --fix",
     "build": "node ./node_modules/@babel/cli/bin/babel src/** -d dist/",
+    "build:prod": "NODE_ENV=prod npm run build",
     "watch": "npm run build -w",
-    "prepublishOnly": "npm run lint && npm run build"
+    "prepublishOnly": "npm run lint && npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "standard": "*"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "babel-preset-minify": "^0.5.0"
   }
 }
