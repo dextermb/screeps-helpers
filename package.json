@@ -4,7 +4,12 @@
   "description": "A collection of helper functions for the game Screeps",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "fix": "npm run lint --fix",
+    "build": "node ./node_modules/@babel/cli/bin/babel src/** -d dist/",
+    "watch": "npm run build -w",
+    "prepublishOnly": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +24,29 @@
   "bugs": {
     "url": "https://github.com/dextermb/screeps-helpers/issues"
   },
-  "homepage": "https://github.com/dextermb/screeps-helpers#readme"
+  "homepage": "https://github.com/dextermb/screeps-helpers#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prepublishOnly"
+    }
+  },
+  "standard": {
+    "ignore": [
+      "/dist/",
+      "/node_modules/",
+      "/ScreepsAutocomplete/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "husky": "^1.3.1",
+    "standard": "*"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
 }

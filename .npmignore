@@ -1,0 +1,6 @@
+ScreepsAutoComplete/
+src/
+.gitignore
+.gitmodules
+.tern-project
+.DS_Store
